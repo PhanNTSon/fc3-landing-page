@@ -22,38 +22,8 @@ const teamMembers = [
 
 export default function SponsorSection() {
   return (
-    <div>
-      <div className="mb-16 text-center" data-aos="fade-up">
-        <h2 className="mb-4 text-3xl font-bold text-primary">Our Sponsors & Team</h2>
-        <p className="max-w-2xl mx-auto text-gray-600">
-          We're grateful to our sponsors for making this event possible and to our dedicated team members who work
-          tirelessly to organize it.
-        </p>
-      </div>
-
-      <div className="mb-16" data-aos="fade-up">
-        <h3 className="mb-8 text-2xl font-bold text-center">Sponsors & Partners</h3>
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">
-          {sponsors.map((sponsor, index) => (
-            <Card key={index} className="transition-shadow border-0 shadow-sm hover:shadow-md">
-              <CardContent className="flex flex-col items-center justify-center p-6">
-                <Image
-                  src={sponsor.logo || "/placeholder.svg"}
-                  alt={`${sponsor.name} logo`}
-                  width={160}
-                  height={80}
-                  className="mb-4"
-                />
-                <p className="font-medium text-gray-800">{sponsor.name}</p>
-                <span className="text-xs text-gray-500">{sponsor.tier} Sponsor</span>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-
       <div data-aos="fade-up">
-        <h3 className="mb-8 text-2xl font-bold text-center">FPTU Cloud Computing Club Members</h3>
+        <h3 className="mb-8 text-2xl font-bold text-center text-white">FPTU Cloud Computing Club Members</h3>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center">
@@ -65,13 +35,12 @@ export default function SponsorSection() {
                   className="object-cover border-2 border-blue-500 rounded-full"
                 />
               </div>
-              <h4 className="font-medium text-gray-800">{member.name}</h4>
-              <p className="text-sm text-gray-500">{member.role}</p>
+              <h4 className="font-medium text-white">{member.name}</h4>
+              <p className="text-sm text-neutral-200">{member.role}</p>
             </div>
           ))}
         </div>
       </div>
-    </div>
   )
 }
 

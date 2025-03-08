@@ -1,26 +1,41 @@
-"use client"
+"use client";
 
-import { Calendar, Clock, MapPin, Users } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import Link from "next/link"
-import { useEffect } from "react"
-import Timeline from "@/components/Timeline"
+import {
+  Calendar,
+  Clock,
+  FacebookIcon,
+  Locate,
+  LocateIcon,
+  MailIcon,
+  MapIcon,
+  MapPin,
+  MapPinIcon,
+  PhoneIcon,
+  User2Icon,
+  Users,
+} from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import SponsorSection from "@/components/Sponsor";
+import Timeline from "@/components/Timeline";
+import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    const AOS = require("aos")
+    const AOS = require("aos");
     AOS.init({
       duration: 800,
       easing: "ease-out-cubic",
       once: true,
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <main className="min-h-screen">
-      <header className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md">
-        <div className="container flex items-center justify-between px-4 py-4 mx-auto">
+      <header className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 backdrop-blur-md">
+        <div className="container relative flex items-center justify-between px-4 py-4 mx-auto">
           <div className="flex items-center gap-2">
             <Image
               src="/fc3.jpeg?height=40&width=40"
@@ -29,46 +44,57 @@ export default function Home() {
               height={40}
               className="rounded"
             />
-            <span className="text-lg font-bold text-primary">FC3 x FCJ Community Day</span>
+            <span className="text-lg font-bold text-primary">
+              FC3 x FCJ Community Day
+            </span>
           </div>
-          <nav className="hidden gap-6 md:flex">
-            <Link href="#home" className="text-gray-700 transition-colors hover:text-primary">
-              Home
-            </Link>
-            <Link href="#about" className="text-gray-700 transition-colors hover:text-primary">
-              About
-            </Link>
-            <Link href="#agenda" className="text-gray-700 transition-colors hover:text-primary">
-              Agenda
-            </Link>
-            <Link href="#register" className="text-gray-700 transition-colors hover:text-primary">
-              Register
-            </Link>
-          </nav>
-          <Link href="#register">
-            <Button size="sm" className="text-white bg-orange-500 cursor-pointer hover:bg-orange-600">
+          <div className="absolute hidden transform -translate-x-1/2 -translate-y-1/2 md:block top-1/2 left-1/2">
+            <Image
+              src="/sponsors.png"
+              alt="Sponsors"
+              width={500}
+              height={500}
+              className="rounded"
+            />
+          </div>
+          <Link href="#register" className="hidden md:block">
+            <Button
+              size="sm"
+              className="text-white bg-orange-500 cursor-pointer hover:bg-orange-600"
+            >
               Register Now
             </Button>
           </Link>
         </div>
       </header>
-
-      <section id="home" className="relative py-40 text-white bg-gradient-to-r from-blue-900 to-blue-700 md:py-32">
-        <div className="absolute inset-0 opacity-10">
-          <Image src="/placeholder.svg?height=800&width=1600" alt="Background Pattern" fill className="object-cover" />
-        </div>
+      <div className="flex items-center justify-center w-full px-3 pt-20 md:hidden">
+        <Image
+          src="/sponsors.png"
+          alt="Sponsors"
+          width={500}
+          height={500}
+          className="rounded"
+        />
+      </div>
+      <section id="home" className="relative py-10 text-white md:py-32">
+        <div className="absolute inset-0 opacity-10"></div>
         <div className="container relative px-4 mx-auto" data-aos="fade-up">
           <div className="max-w-3xl">
             <div className="inline-block px-4 py-1 mb-6 text-white bg-orange-500 rounded-full">
               15th March, 2025 | 8:30 AM - 12:00 PM
             </div>
-            <h1 className="mb-6 text-4xl font-bold md:text-6xl">Join Us for the FC3 x FCJ Community Day!</h1>
+            <h1 className="mb-6 text-4xl font-bold md:text-6xl">
+              Join Us for the FC3 x FCJ Community Day!
+            </h1>
             <p className="mb-8 text-xl text-blue-100 md:text-2xl">
               Learn, Network, and Explore the Latest in AWS Technologies.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link href="#register">
-                <Button size="lg" className="bg-orange-500 cursor-pointer hover:bg-orange-600">
+                <Button
+                  size="lg"
+                  className="bg-orange-500 cursor-pointer hover:bg-orange-600"
+                >
                   Register Now
                 </Button>
               </Link>
@@ -101,7 +127,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" className="py-20">
         <div className="container px-4 mx-auto">
           <div className="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
             <div data-aos="fade-right">
@@ -114,22 +140,28 @@ export default function Home() {
               />
             </div>
             <div data-aos="fade-left">
-              <h2 className="mb-6 text-3xl font-bold text-primary">About The Event</h2>
-              <p className="mb-6 text-gray-700">
-                The FC3 x FCJ Community Day is a premier AWS technology event hosted by the FPTU Cloud Computing Club at
-                FPT University. This gathering brings together cloud enthusiasts, professionals, and students for a
-                morning of learning and networking.
+              <h2 className="mb-6 text-3xl font-bold text-white">
+                About The Event
+              </h2>
+              <p className="mb-6 text-white">
+                The FC3 x FCJ Community Day is a premier AWS technology event
+                hosted by the FPTU Cloud Computing Club at FPT University. This
+                gathering brings together cloud enthusiasts, professionals, and
+                students for a morning of learning and networking.
               </p>
-              <p className="mb-6 text-gray-700">
-                Our goal is to share knowledge about AWS technologies, provide networking opportunities, and inspire the
-                next generation of cloud professionals.
+              <p className="mb-6 text-white">
+                Our goal is to share knowledge about AWS technologies, provide
+                networking opportunities, and inspire the next generation of
+                cloud professionals.
               </p>
               <div className="p-6 bg-white border border-blue-400 rounded-lg shadow-md">
                 <h3 className="flex items-center gap-2 mb-4 text-lg font-semibold">
                   <MapPin className="w-5 h-5 text-orange-500" />
                   Venue Details
                 </h3>
-                <p className="text-gray-700">Gamma Conference Hall, FPT University, Thach That, Ha Noi</p>
+                <p className="text-gray-700">
+                  Gamma Conference Hall, FPT University, Thach That, Ha Noi
+                </p>
                 <div className="flex items-center gap-2 mt-4">
                   <Users className="w-5 h-5 text-orange-500" />
                   <p className="text-gray-700">Limited seats available</p>
@@ -143,10 +175,10 @@ export default function Home() {
       <section id="agenda" className="py-20">
         <div className="container px-4 mx-auto">
           <div className="mb-16 text-center" data-aos="fade-up">
-            <h2 className="mb-4 text-3xl font-bold text-primary">Event Agenda</h2>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              Join us for a packed morning of insightful sessions, networking opportunities, and the latest in AWS
-              technologies.
+            <h2 className="mb-4 text-3xl font-bold text-white">Event Agenda</h2>
+            <p className="max-w-2xl mx-auto text-white text-gray-600">
+              Join us for a packed morning of insightful sessions, networking
+              opportunities, and the latest in AWS technologies.
             </p>
           </div>
 
@@ -154,12 +186,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="register" className="py-20 bg-gradient-to-r from-[#497ED9] to-[#65A0E7] text-white">
+      <section
+        id="register"
+        className="py-20 bg-gradient-to-r from-[#497ED9] to-[#65A0E7] text-white"
+      >
         <div className="container px-4 mx-auto">
           <div className="mb-12 text-center" data-aos="fade-up">
             <h2 className="mb-4 text-3xl font-bold">Register Now</h2>
             <p className="max-w-2xl mx-auto text-blue-100">
-              Secure your spot at the FC3 x FCJ Community Day. Registration is free but seats are limited!
+              Secure your spot at the FC3 x FCJ Community Day. Registration is
+              free but seats are limited!
             </p>
           </div>
 
@@ -189,10 +225,14 @@ export default function Home() {
               </div>
               <h3 className="mb-2 text-xl font-bold">FPT Students</h3>
               <p className="mb-6 text-blue-100">
-                Current FPT University students can register using their student email address.
+                Current FPT University students can register using their student
+                email address.
               </p>
               <Link href="https://forms.gle/KzTvFKiv9x3zAp529" target="_blank">
-                <Button size="lg" className="bg-[#497ED9] text-white hover:bg-[#3A6AC0] w-full">
+                <Button
+                  size="lg"
+                  className="bg-[#497ED9] text-white hover:bg-[#3A6AC0] w-full"
+                >
                   Register as FPT Student
                 </Button>
               </Link>
@@ -221,17 +261,25 @@ export default function Home() {
               </div>
               <h3 className="mb-2 text-xl font-bold">Other Participants</h3>
               <p className="mb-6 text-blue-100">
-                Industry professionals, enthusiasts, and students from other institutions.
+                Industry professionals, enthusiasts, and students from other
+                institutions.
               </p>
               <Link href="https://forms.gle/KzTvFKiv9x3zAp529" target="_blank">
-                <Button size="lg" className="w-full text-white bg-orange-500 hover:bg-orange-600">
+                <Button
+                  size="lg"
+                  className="w-full text-white bg-orange-500 hover:bg-orange-600"
+                >
                   Register as Guest
                 </Button>
               </Link>
             </div>
           </div>
 
-          <div className="mt-12 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div
+            className="mt-12 text-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <p className="text-blue-100">
               Have questions about registration? Contact us at{" "}
               <span className="font-semibold">contact@fc3.fptu.edu.vn</span>
@@ -240,72 +288,63 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="about" className="py-20">
+        <div className="container px-4 mx-auto">
+          <SponsorSection />
+        </div>
+      </section>
+
       <footer className="py-12 text-white bg-blue-900">
         <div className="container px-4 mx-auto">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div>
-              <h3 className="mb-4 text-xl font-bold">FC3 x FCJ Community Day</h3>
-              <p className="text-blue-200">Learn, Network, and Explore the Latest in AWS Technologies.</p>
+              <h3 className="mb-4 text-xl font-bold">
+                FC3 x FCJ Community Day
+              </h3>
+              <p className="text-white">
+                Learn, Network, and Explore the Latest in AWS Technologies.
+              </p>
+              <p className="flex items-start gap-2 mt-4">
+                <MapPinIcon />
+                <Link
+                  href="https://maps.app.goo.gl/bVTK4FbdA2dDwVFY9"
+                  target="_blank"
+                  className="flex flex-col items-center gap-2 transition-colors hover:underline lg:flex-row hover:text-primary"
+                >
+                  FPT University Hanoi, Hoa Lac High-Tech Park, KM 29 Thang Long
+                  Boulevard, Hanoi
+                </Link>
+              </p>
+            </div>
+            <div>
+              <h3 className="mb-4 text-xl font-bold">Representative</h3>
+              <p className="flex items-start gap-2 mt-4 mb-2 text-white">
+                <User2Icon /> <span>Tran Tri Dung</span>
+              </p>
+              <p className="flex items-start gap-2 mt-4 text-white">
+                <PhoneIcon /> <span>+84 363 894 825</span>
+              </p>
             </div>
             <div>
               <h3 className="mb-4 text-xl font-bold">Contact Us</h3>
-              <p className="mb-2 text-blue-200">Email: contact@fc3.fptu.edu.vn</p>
-              <p className="text-blue-200">Phone: +84 123 456 789</p>
-            </div>
-            <div>
-              <h3 className="mb-4 text-xl font-bold">Follow Us</h3>
-              <div className="flex gap-4">
-                <a href="#" className="text-white transition-colors hover:text-orange-400">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-facebook"
-                  >
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                </a>
-                <a href="#" className="text-white transition-colors hover:text-orange-400">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-twitter"
-                  >
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                  </svg>
-                </a>
-                <a href="#" className="text-white transition-colors hover:text-orange-400">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-linkedin"
-                  >
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                    <rect width="4" height="12" x="2" y="9" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
-                </a>
-              </div>
+              <Link
+                href="https://www.facebook.com/fc3.fpt"
+                target="_blank"
+                className="flex items-center gap-2 transition-colors hover:text-primary"
+              >
+                <p className="flex items-start gap-2 mb-2 text-white">
+                  <FacebookIcon /> <span>FPTU Cloud Computing Club - FC3</span>
+                </p>
+              </Link>
+              <Link
+                href="mailto:fc3.fpt@gmail.com"
+                target="_blank"
+                className="flex items-center gap-2 transition-colors hover:text-primary"
+              >
+                <p className="flex items-start gap-2 mb-2 text-white">
+                  <MailIcon /> <span>Mail: fc3.fpt@gmail.com</span>
+                </p>
+              </Link>
             </div>
           </div>
           <div className="pt-8 mt-8 text-center text-blue-300 border-t border-blue-800">
@@ -314,6 +353,5 @@ export default function Home() {
         </div>
       </footer>
     </main>
-  )
+  );
 }
-

@@ -67,3 +67,7 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
+
+body {
+  @apply bg-gradient-to-r from-[#497ED9] to-[#65A0E7];
+}

@@ -92,9 +92,9 @@ const timelineItems = [
 export default function Timeline() {
   return (
     <div className="relative">
-      <div className="absolute top-0 bottom-0 hidden w-1 transform -translate-x-1/2 md:block left-1/2 bg-gradient-to-b from-blue-400 to-blue-600"></div>
+      <div className="absolute top-0 bottom-0 hidden w-1 transform -translate-x-1/2 bg-white md:block left-1/2"></div>
 
-      <div className="md:hidden absolute left-[20px] top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 to-blue-600"></div>
+      <div className="md:hidden absolute left-[20px] top-0 bottom-0 w-1 bg-white"></div>
 
       <div className="space-y-12">
         {timelineItems.map((item, index) => {
@@ -129,7 +129,7 @@ export default function Timeline() {
                   ${item.speaker ? "bg-gradient-to-br from-white to-blue-50" : ""}
                 `}
                 >
-                  <h3 className="mb-2 text-xl font-bold text-blue-800">{item.title}</h3>
+                  <h3 className="mb-2 text-xl font-bold text-[#497ED9]">{item.title}</h3>
                   <p className="mb-4 text-gray-600">{item.description}</p>
 
                   {item.speaker && (
@@ -145,7 +145,7 @@ export default function Timeline() {
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-800">{item.speaker}</h4>
-                          <p className="mb-1 text-sm text-blue-600">{item.role}</p>
+                          <p className="mb-1 text-sm text-[#65A0E7]">{item.role}</p>
                           {item.speakerBio && <p className="mt-1 text-sm text-gray-500">{item.speakerBio}</p>}
                         </div>
                       </div>
