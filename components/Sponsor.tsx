@@ -23,7 +23,7 @@ const teamMembers = [
 export default function SponsorSection() {
   return (
       <div data-aos="fade-up">
-        <h3 className="mb-8 text-2xl font-bold text-center text-white">FPTU Cloud Computing Club Members</h3>
+        <h3 className="mb-8 text-2xl font-bold text-center">FPTU Cloud Computing Club Members</h3>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center">
@@ -35,8 +35,8 @@ export default function SponsorSection() {
                   className="object-cover border-2 border-blue-500 rounded-full"
                 />
               </div>
-              <h4 className="font-medium text-white">{member.name}</h4>
-              <p className="text-sm text-neutral-200">{member.role}</p>
+              <h4 className="font-medium">{member.name}</h4>
+              <p className="text-sm text-neutral-800">{member.role}</p>
             </div>
           ))}
         </div>
