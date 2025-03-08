@@ -225,7 +225,7 @@ export default function Home() {
               <Link href="https://forms.gle/KzTvFKiv9x3zAp529" target="_blank">
                 <Button
                   size="lg"
-                  className="bg-[#497ED9] cursor-pointer text-white hover:bg-[#3A6AC0] w-full"
+                   className="w-full text-white bg-orange-500 cursor-pointer hover:bg-orange-600"
                 >
                   Register as FPT Student
                 </Button>
