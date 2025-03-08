@@ -176,10 +176,6 @@ export default function Home() {
             <h2 className="mb-4 text-3xl font-bold text-primary">
               Event Agenda
             </h2>
-            <p className="mx-auto text-gray-600">
-              Join us for a packed morning of insightful sessions, networking
-              opportunities, and the latest in AWS technologies.
-            </p>
           </div>
 
           <Timeline />
@@ -272,17 +268,6 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-          </div>
-
-          <div
-            className="mt-12 text-center"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <p className="text-neutral-600">
-              Have questions about registration? Contact us at{" "}
-              <span className="font-semibold">fc3.fpt@gmail.com</span>
-            </p>
           </div>
         </div>
       </section>
