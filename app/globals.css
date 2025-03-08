@@ -68,6 +68,6 @@
   }
 }
 
-body {
+.hero {
   @apply bg-gradient-to-r from-[#497ED9] to-[#65A0E7];
 }
