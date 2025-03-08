@@ -130,12 +130,10 @@ const timelineItems = [
                  `}
                  >
                    <h3 className="mb-2 text-xl font-bold text-blue-800">{item.title}</h3>
-                   <p className="mb-4 text-gray-600">{item.description}</p>
- 
                    {item.speaker && (
                      <div className="pt-4 mt-4 border-t border-gray-100">
-                       <div className="flex items-start gap-4 md:items-center">
-                         <div className="relative flex-shrink-0 w-16 h-16 overflow-hidden border-2 border-blue-400 rounded-full shadow-md">
+                       <div className={`flex items-start gap-4 md:items-center ${isEven ? "md:justify-end" : "md:justify-start"}`}>
+                         <div className={`relative flex-shrink-0 w-16 h-16 overflow-hidden border-2 border-blue-400 rounded-full shadow-md ${isEven ? "md:order-2" : ""}`}>
                            <Image
                              src={item.speakerImage || "/placeholder.svg?height=200&width=200"}
                              alt={item.speaker}
@@ -145,8 +143,7 @@ const timelineItems = [
                          </div>
                          <div>
                            <h4 className="font-semibold text-gray-800">{item.speaker}</h4>
-                           <p className="mb-1 text-sm text-blue-600">{item.role}</p>
-                           {item.speakerBio && <p className="mt-1 text-sm text-gray-500">{item.speakerBio}</p>}
+                           <p className="mb-1 text-blue-600">{item.role}</p>
                          </div>
                        </div>
                      </div>

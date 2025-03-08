@@ -176,8 +176,11 @@ export default function Home() {
             <h2 className="mb-4 text-3xl font-bold text-primary">
               Event Agenda
             </h2>
+            <p className="mx-auto text-gray-600">
+               Join us for a packed morning of insightful sessions, networking opportunities, and the latest in AWS
+               technologies.
+             </p>
           </div>
-
           <Timeline />
         </div>
       </section>
