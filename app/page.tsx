@@ -222,10 +222,10 @@ export default function Home() {
                 FPT Students
               </h3>
               <p className="mb-6 text-neutral-100">
-                Current FPT University students can register using their student
+                Current FPT University students can register using student
                 email address.
               </p>
-              <Link href="https://forms.gle/KzTvFKiv9x3zAp529" target="_blank">
+              <Link href="https://forms.gle/nCoTARKEeQAKaYVn7" target="_blank">
                 <Button
                   size="lg"
                    className="w-full text-white bg-orange-500 cursor-pointer hover:bg-orange-600"
