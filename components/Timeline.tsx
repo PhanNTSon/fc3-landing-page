@@ -25,7 +25,7 @@ const timelineItems = [
      description: "Learn about the fundamentals of cloud operations and best practices",
      speaker: "Mr. Hai Tran",
      role: "AWS Technical Account Manager",
-     speakerImage: "/placeholder.svg?height=200&width=200",
+     speakerImage: "/HaiTran.png?height=200&width=200",
      speakerBio:
        "Hai has over 10 years of experience in cloud infrastructure and operations, helping enterprises optimize their AWS deployments.",
    },
@@ -35,7 +35,7 @@ const timelineItems = [
      description: "Explore practical applications of generative AI on AWS",
      speaker: "Mr. Huy Tran",
      role: "AWS Senior Solution Architect",
-     speakerImage: "/placeholder.svg?height=200&width=200",
+     speakerImage: "/HuyTran.png?height=200&width=200",
      speakerBio:
        "Huy specializes in AI/ML solutions on AWS and has helped numerous organizations implement generative AI in their workflows.",
    },
@@ -45,7 +45,7 @@ const timelineItems = [
      description: "Discover how generative AI is transforming DevOps practices",
      speaker: "Ms. Yen Trinh",
      role: "AWS Community Builder",
-     speakerImage: "/placeholder.svg?height=200&width=200",
+     speakerImage: "/YenTrinh.jpeg?height=200&width=200",
      speakerBio:
        "Yen is passionate about DevOps culture and has been at the forefront of integrating AI into CI/CD pipelines.",
    },
@@ -64,7 +64,7 @@ const timelineItems = [
      description: "Learn optimal configurations for Amazon EKS Auto Mode",
      speaker: "Mr. Kha Van",
      role: "AWS Community Builder",
-     speakerImage: "/placeholder.svg?height=200&width=200",
+     speakerImage: "/HoangKha.png?height=200&width=200",
      speakerBio:
        "Kha is a Kubernetes expert who has helped design and implement EKS solutions for enterprises across Asia.",
    },
@@ -74,7 +74,7 @@ const timelineItems = [
      description: "Strategies to effectively manage and reduce AWS costs",
      speaker: "Mr. Tung Cao",
      role: "AWS Solution Architect",
-     speakerImage: "/placeholder.svg?height=200&width=200",
+     speakerImage: "/TungCao.png?height=200&width=200",
      speakerBio:
        "Tung has helped companies save millions in cloud costs through effective optimization strategies and architectural improvements.",
    },
